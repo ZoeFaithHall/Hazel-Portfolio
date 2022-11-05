@@ -52,8 +52,8 @@ $success: #7952b3;
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/input-group"; // Requires forms
 // @import "bootstrap/scss/custom-forms";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/pagination";
@@ -80,11 +80,102 @@ $success: #7952b3;
 
 @import "icon-list";
 
+//Global
 body {
-  padding: 3rem 1.5rem;
+  padding: 1rem 2rem;
+}
+.navbar {
+  padding: 0rem 0.5rem 1rem;
 }
 
 // Style Bootstrap icons
 .bi {
   fill: currentcolor;
+}
+
+//Section
+
+section {
+  .row {
+    padding-bottom: 2rem;
+  }
+}
+
+.projects {
+  .row {
+    padding-bottom: 0.5rem;
+    .col-12 {
+      margin: 0;
+      padding: 0.5rem 0.5rem 0;
+    }
+  }
+}
+
+.img-wrapper {
+  height: 400px;
+  overflow: hidden;
+
+  .img {
+    position: relative;
+    background: url("/assets/images/150.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s linear;
+  
+    &.--hover {
+      transform: scale(1.2);
+      }
+    
+    &.--slide {
+    }
+  }
+
+  .project-title {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &.--title-hover {
+      color: red;
+      }
+  }
+}
+
+.img-hover-zoom {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  img {
+    width: 100%;
+    transition: transform 1s linear;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  
+}
+
+.card-title {
+  position: absolute;
+  z-index: 2;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0; 
 }
