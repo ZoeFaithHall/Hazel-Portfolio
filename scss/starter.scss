@@ -80,13 +80,194 @@ $success: #7952b3;
 
 @import "icon-list";
 
+//Fonts 
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(/assets/font/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: Poppins-Reg;
+  src: url(/assets/font/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: Poppins-Med;
+  src: url(/assets/font/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: Poppins-Light;
+  src: url(/assets/font/Poppins-Light.ttf);
+}
+
 //Global
 body {
   padding: 1rem 2rem;
   scroll-behavior: smooth;
+  font-family: 'Poppins-Light';
+  background: #fefefe;
 }
 .navbar {
   padding: 0rem 0.5rem 1rem;
+  .navbar-brand {
+    font-family: 'Poppins-Bold';
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+  .nav-link {
+    font-size: .75rem;
+    padding: 0!important;
+    margin: 0.25rem 0;
+    border: none;
+    @media(min-width: 992px){
+      margin: 0 0.5rem;
+    }
+
+    &.active {
+      @media(min-width: 992px){
+        border-bottom: 1px solid black;
+        padding: 0;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+  .navbar-toggler {
+      border: none;
+      box-shadow: none!important;
+      padding-right: 0;
+      .btn {
+        width: 80px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 0;
+        &:active {
+          box-shadow: none!important;
+        }
+        &.active {
+          box-shadow: none!important;
+        }
+      }
+      span {
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: black;
+        transition: all .3s;
+        position: relative;
+        border-radius: 2px;
+      }
+      
+      span + span {
+        margin-top: 5px;
+      }
+      
+      .active span:nth-child(1) {
+        animation: ease .7s top forwards;
+      }
+      
+      .not-active span:nth-child(1) {
+        animation: ease .7s top-2 forwards;
+      }
+      
+      .active span:nth-child(2) {
+        animation: ease .7s scaled forwards;
+      }
+      
+      .not-active span:nth-child(2) {
+        animation: ease .7s scaled-2 forwards;
+      }
+      
+      .active span:nth-child(3) {
+        animation: ease .7s bottom forwards;
+      }
+      
+      .not-active span:nth-child(3) {
+        animation: ease .7s bottom-2 forwards;
+      }
+      
+      @keyframes top {
+        0% {
+          top: 0;
+          transform: rotate(0);
+        }
+        50% {
+          top: 7.5px;
+          transform: rotate(0);
+        }
+        100% {
+          top: 7.5px;
+          transform: rotate(45deg);
+        }
+      }
+      
+      @keyframes top-2 {
+        0% {
+          top: 7.5px;
+          transform: rotate(45deg);
+        }
+        50% {
+          top: 7.5px;
+          transform: rotate(0deg);
+        }
+        100% {
+          top: 0;
+          transform: rotate(0deg);
+        }
+      }
+      
+      @keyframes bottom {
+        0% {
+          bottom: 0;
+          transform: rotate(0);
+        }
+        50% {
+          bottom: 8.5px;
+          transform: rotate(0);
+        }
+        100% {
+          bottom: 8.5px;
+          transform: rotate(135deg);
+        }
+      }
+      
+      @keyframes bottom-2 {
+        0% {
+          bottom: 8.5px;
+          transform: rotate(135deg);
+        }
+        50% {
+          bottom: 8.5px;
+          transform: rotate(0);
+        }
+        100% {
+          bottom: 0;
+          transform: rotate(0);
+        }
+      }
+      
+      @keyframes scaled {
+        50% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      
+      @keyframes scaled-2 {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+  }
 }
 
 // Style Bootstrap icons

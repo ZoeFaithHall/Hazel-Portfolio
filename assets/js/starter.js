@@ -30,4 +30,11 @@ $(function(){
     $(".title").mouseleave(function(){
         $(this).siblings('.img').removeClass('--hover');
     })
+
+    //Navbar button
+    var btn = $('.btn');
+
+    btn.on('click', function() {
+    $(this).toggleClass('active not-active');
+    });
 });
