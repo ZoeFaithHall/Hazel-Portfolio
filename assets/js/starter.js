@@ -23,11 +23,11 @@ import "../../node_modules/bootstrap/js/dist/modal.js";
 
 // Zoom on Project Card
 $(function(){
-    $(".img").mouseenter(function(){
-        $(this).addClass('--hover');
+    $(".title").mouseenter(function(){
+        $(this).siblings('.img').addClass('--hover');
     }),
 
-    $(".img").mouseleave(function(){
-        $(this).removeClass('--hover');
+    $(".title").mouseleave(function(){
+        $(this).siblings('.img').removeClass('--hover');
     })
 });
