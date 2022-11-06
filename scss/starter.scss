@@ -100,18 +100,29 @@ $success: #7952b3;
 
 //Global
 body {
-  padding: 1rem 2rem;
   scroll-behavior: smooth;
   font-family: 'Poppins-Light';
   background: #fefefe;
 }
+p {
+  font-size: .75rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.75rem;
+}
 .navbar {
-  padding: 0rem 0.5rem 1rem;
+  padding: 1rem 2.5rem;
   .navbar-brand {
     font-family: 'Poppins-Bold';
     font-size: 1.5rem;
     letter-spacing: 2px;
     text-transform: capitalize;
+    &:hover {
+      opacity: 75%;
+    }
   }
 
   .nav-link {
@@ -119,15 +130,20 @@ body {
     padding: 0!important;
     margin: 0.25rem 0;
     border: none;
+    color: black!important;
     @media(min-width: 992px){
       margin: 0 0.5rem;
+    }
+    &:hover {
+      color: black;
+      opacity: 75%;
     }
 
     &.active {
       @media(min-width: 992px){
-        border-bottom: 1px solid black;
         padding: 0;
         margin: 0 0.5rem;
+        color: black;
       }
     }
   }
@@ -278,6 +294,7 @@ body {
 //Section
 
 section {
+  padding: 1rem 2rem;
   .row {
     padding-bottom: 2rem;
   }
@@ -379,4 +396,99 @@ section {
   align-items: center;
   padding: 0;
   margin: 0; 
+}
+
+//Contact Page
+
+section.contact {
+  padding: 1.5rem 1.75rem;
+  .contact-img {
+    position: relative;
+    background: url("/assets/images/150.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+section.about {
+
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      font-family: 'Poppins-Med';
+      padding: .15rem 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  .email, .phone {
+    font-family: 'Poppins-Med';
+    p {
+      margin-bottom: .15rem;
+      padding-bottom: 0;
+    }
+    a {
+      font-family: 'Poppins-Light';
+    }
+  }
+}
+
+.project-detail {
+ nav {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  .navbar-brand {
+    color: white!important;
+    &:hover {
+      color: white!important;
+      opacity: 75%;
+    }
+  }
+ }
+ .navbar-nav {
+  .nav-item {
+    color: white!important;
+    opacity: 75%;
+    &.active {
+      color: white!important;
+      opacity: 75%;
+    }
+    &:hover {
+      color: white;
+      opacity: 75%;
+    }
+  }
+}
+}
+section.project-detail {
+  padding: 0 0 2rem  0;
+  .row {
+    padding: 0;
+    .col-12 {
+      padding: 0;
+    }
+  }
+ 
+  .img-wrapper {
+    height: 500px;
+  }
+  .contact-img {
+    position: relative;
+    background: url("/assets/images/150.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+section.about {
+  padding: 1.5rem 1.75rem;
 }
