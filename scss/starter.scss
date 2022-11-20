@@ -325,7 +325,7 @@ section {
   overflow: hidden;
 
   .title {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: 'Poppins-Med';
     position: absolute;
     z-index: 2;
@@ -338,12 +338,11 @@ section {
     justify-content: center;
     align-items: center;
     transition: transform 1s linear;
+    
     &:hover {
       color: black;
+      visibility: visible;
       transform: scale(1);
-    }
-    &.--is-visible{
-
     }
   }
 
@@ -353,10 +352,10 @@ section {
     width: 100%;
     height: 100%;
     transition: transform .75s ease-in-out;
-    opacity: 100%;
+    opacity: 80%;
     &.--hover {
       transform: scale(1.2);
-      opacity: 80%;
+      opacity: 100%;
       }
 
       &.come-in {
@@ -373,44 +372,98 @@ section {
 
       //Home Project Images
       &.img-1 {
-        background: url("/assets/images/Veterans-Voices.png");
+        background: url("/assets/images/Google-Doodle2.png");
         @include img;
       }
       &.img-2 {
-        background: url("/assets/images/StoryCorps2.png");
+        background: url("/assets/images/Veterans-Voices.png");
         @include img;
+      }
+      &.img-3 {
+        background: url("/assets/images/StoryCorps3.png");
+        @include img;
+      }
+      &.img-4 {
+        background: url("/assets/images/LatinaSheServed.png");
+        @include img;
+      }
+      &.img-5 {
+        background: url("/assets/images/Disaster3.png");
+        @include img;
+      }
+      &.img-6 {
+        background: url("/assets/images/Mealsonwheels.png")
       }
 
       //Project Pages and Sub Images
       &.project-1-img-1 {
-        background: url("/assets/images/Veterans-Voices2.png");
+        background: url("/assets/images/Google-Doodle3.jpeg");
         @include img;
       }
       &.project-1-img-2 {
-        background: url("/assets/images/Veterans-Voices5.png");
+        background: url("/assets/images/Google-Doodle-2.jpeg");
         @include img;
       }
       &.project-1-img-3{
+        background: url("/assets/images/Google-Doodle4.jpeg");
+        @include img;
+      }
+
+      //Project 2
+      &.project-2-img-1 {
+        background: url("/assets/images/Veterans-Voices2.png");
+        @include img;
+      }
+      &.project-2-img-2 {
+        background: url("/assets/images/Veterans-Voices5.png");
+        @include img;
+      }
+      &.project-2-img-3{
         background: url("/assets/images/Veterans-Voices.png");
         @include img;
       }
-      &.project-1-img-4 {
+      &.project-2-img-4 {
         background: url("/assets/images/Veterans-Voices3.png");
         @include img;
       }
-      &.project-1-img-5 {
+      &.project-2-img-5 {
         background: url("/assets/images/Veterans-Voices4.png");
         @include img;
       }
 
-      &.project-2-img-2 {
+      //Project 3
+      &.project-3-img-1 {
+        background: url("/assets/images/StoryCorps2.png");
+        @include img;
+      }
+      &.project-3-img-2 {
         background: url("/assets/images/StoryCorps1.png");
         @include img;
       }
-      &.project-2-img-3 {
+      &.project-3-img-3 {
         background: url("/assets/images/StoryCorps3.png");
         @include img;
-        background: blue;
+      }
+
+      //Project 4
+      // &.project-4-img-1 {
+      //   background: url("/assets/images/);
+      //   @include img;
+      // }
+
+      //Project 5
+      &.project-5-img-1 {
+        background: url("/assets/images/Disaster2.png");
+        @include img;
+      }
+      &.project-5-img-2 {
+        background: url("/assets/images/Disaster1.png");
+        @include img;
+      }
+
+      //Project 6
+      &.project-6-img-1 {
+        background: url("/assets/images/Mealsonwheels.png")
       }
   }
 
