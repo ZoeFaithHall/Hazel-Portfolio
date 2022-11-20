@@ -98,6 +98,13 @@ $success: #7952b3;
   src: url(/assets/font/Poppins-Light.ttf);
 }
 
+//Mixins
+@mixin img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 //Global
 body {
   scroll-behavior: smooth;
@@ -335,21 +342,21 @@ section {
       color: black;
       transform: scale(1);
     }
+    &.--is-visible{
 
+    }
   }
 
   .img, .detail-img {
     position: relative;
-    background: url("/assets/images/150.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    @include img;
     width: 100%;
     height: 100%;
-    transition: transform .75s linear;
-  
+    transition: transform .75s ease-in-out;
+    opacity: 100%;
     &.--hover {
       transform: scale(1.2);
+      opacity: 80%;
       }
 
       &.come-in {
@@ -363,7 +370,49 @@ section {
       @keyframes come-in {
         to { transform: translateY(0); }
       }
+
+      //Home Project Images
+      &.img-1 {
+        background: url("/assets/images/Veterans-Voices.png");
+        @include img;
+      }
+      &.img-2 {
+        background: url("/assets/images/StoryCorps2.png");
+        @include img;
+      }
+
+      //Project Pages and Sub Images
+      &.project-1-img-1 {
+        background: url("/assets/images/Veterans-Voices2.png");
+        @include img;
+      }
+      &.project-1-img-2 {
+        background: url("/assets/images/Veterans-Voices5.png");
+        @include img;
+      }
+      &.project-1-img-3{
+        background: url("/assets/images/Veterans-Voices.png");
+        @include img;
+      }
+      &.project-1-img-4 {
+        background: url("/assets/images/Veterans-Voices3.png");
+        @include img;
+      }
+      &.project-1-img-5 {
+        background: url("/assets/images/Veterans-Voices4.png");
+        @include img;
+      }
+
+      &.project-2-img-2 {
+        background: url("/assets/images/StoryCorps1.png");
+        @include img;
+      }
+      &.project-2-img-3 {
+        background: url("/assets/images/StoryCorps3.png");
+        @include img;
+      }
   }
+
 
   .project-title {
 
@@ -419,7 +468,7 @@ section.contact {
   padding: 1.5rem 1.75rem;
   .contact-img {
     position: relative;
-    background: url("/assets/images/150.png");
+    background: url("/assets/images/HMD_CO2.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -500,18 +549,16 @@ section.project-detail {
     }
   }
  
-  .img-wrapper {
-    height: 500px;
-  }
-  .contact-img {
-    position: relative;
-    background: url("/assets/images/150.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-  }
+
+  // .contact-img {
+  //   position: relative;
+  //   background: url("/assets/images/HMD_CO2.jpeg");
+  //   background-size: cover;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   width: 100%;
+  //   height: 100%;
+  // }
 }
 
 

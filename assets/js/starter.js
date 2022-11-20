@@ -29,7 +29,13 @@ $(function(){
 
     $(".title").mouseleave(function(){
         $(this).siblings('.img').removeClass('--hover');
-    })
+    }),
+    $(".title").mouseenter(function(){
+        $(this).addClass("--is-visible");
+    }),
+    $(".title").mouseleave(function(){
+        $(this).removeClass("--is-visible");
+    });
 
     //Navbar button
     var btn = $('.btn');
