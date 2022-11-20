@@ -410,6 +410,7 @@ section {
       &.project-2-img-3 {
         background: url("/assets/images/StoryCorps3.png");
         @include img;
+        background: blue;
       }
   }
 
